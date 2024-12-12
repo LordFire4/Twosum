@@ -1,0 +1,39 @@
+
+class Solution:
+    def __init__(self):
+        self.target=int
+        self.num=[]
+        self.n=int
+        self.datos=int
+    def agregar_target(self):
+        self.n= int(input("Cuantos elementos vas a agregar: "))
+        self.target=int(input("Cual es tu target: "))
+
+        for i in range (self.n):
+            self.datos= int(input("Ingresa los numeros para la lista: "))
+            self.num.append(self.datos)
+
+    def suma(self):
+        for i in range(self.n):
+            for j in range(self.n):
+                if self.target==self.num[i]+self.num[j]:
+                    return i,j
+                else:
+                    pass
+
+suma=Solution()
+suma.agregar_target()
+print(suma.suma())
+
+
+
+
+
+
+
+
+
+
+
+
+
