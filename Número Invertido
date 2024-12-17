@@ -1,0 +1,40 @@
+
+class Solucion:
+    def __init__(self,n):
+        self.n=n
+
+    def ispalindrome(self):
+
+        if self.n<=0:
+            print("is not a palindrome")
+            return False
+        original=self.n
+        invertido = 0
+        while original>0 :
+                invertido = invertido*10 + original%10
+                original//=10
+        print(f"el numero {self.n} es igual a {invertido+1}")
+        return  invertido==self.n
+
+
+p=Solucion(1221)
+print(p.ispalindrome())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
