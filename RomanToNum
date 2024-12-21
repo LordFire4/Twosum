@@ -1,0 +1,53 @@
+class Solucion:
+    def __init__(self,letra):
+        self.letra=letra
+
+    def roman_to_int(self):
+        c = 0
+        l=self.letra
+        siglas ={
+            'I':1,
+            'V':5,
+            'X':10,
+            'L':50,
+            'C':100,
+            'D':500,
+            'M':1000
+        }
+        for a,b in zip(l,l[1:]):
+
+            if siglas[a]<siglas[b]:
+                c-=siglas[a]
+            else:
+                c+=siglas[a]
+        return c+ siglas[l[-1]]
+
+dato="XII"
+answer=Solucion(dato.upper())
+print(answer.roman_to_int())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
