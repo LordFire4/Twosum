@@ -1,0 +1,27 @@
+
+def multiplo(limite,n1,n2):
+    lista=[]
+    listanueva=[]
+    m1=n1
+    m2=n2
+    if n1 or n2 < limite:
+        for i in range(limite+1):
+            if n1 < i:
+                lista.append(n1)
+                n1+=m1
+            if n2 < i:
+                lista.append(n2)
+                n2+=m2
+        print(suma(lista))
+
+        for n in lista:
+            if n not in listanueva:
+                listanueva.append(n)
+        return listanueva
+
+
+def suma(lista):
+    total=sum(set(lista))
+    return total
+
+print(multiplo(100,2,4))
